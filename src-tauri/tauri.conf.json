@@ -1,0 +1,99 @@
+{
+  "$schema": "https://schema.tauri.app/config/1",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "React-Tauri",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true
+      },
+      "fs": {
+        "all": true
+      },
+      "notification": {
+        "all": true
+      },
+      "dialog": {
+        "all": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "publisher": "Sandun Wiratunga",
+      "category": "Utility",
+      "copyright": "Sandun Wiratunga",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "React-Tauri",
+      "shortDescription": "React-Tauri",
+      "longDescription": "React-Tauri is a React app built with Tauri",
+      "resources": [],
+      "externalBin": [],
+      "targets": [
+        "msi",
+        "nsis"
+      ],
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": "",
+        "allowDowngrades": false,
+        "wix": {
+          "language": "en-US",
+          "bannerPath": "../src/assets/images/installer/banner.png",
+          "dialogImagePath": "../src/assets/images/installer/dialogImage.png"
+        }
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false,
+      "dialog": true,
+      "endpoints": [],
+      "windows": {
+        "installMode": "passive"
+      },
+      "pubkey": ""
+    },
+    "windows": [
+      {
+        "title": "React App",
+        "minWidth": 1000,
+        "minHeight": 600,
+        "fullscreen": false,
+        "focus": true,
+        "resizable": true,
+        "decorations": false,
+        "center": true
+      }
+    ]
+  }
+}
